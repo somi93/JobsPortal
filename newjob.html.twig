@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="newjob_box col-sm-4 col-sm-offset-4">
+        {{ form_start(jobForm) }}
+            <table class="table table-bordered">
+                <tr>
+                    <th colspan="2">Post New Job</th>
+                <tr>
+                    <td>Title</td>
+                    <td>{{ form_row(jobForm.title) }}</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>{{ form_row(jobForm.description) }}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{ form_row(jobForm.email) }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Post Job" class="btn btn-default"></td>
+                </tr>
+            </table>
+        {{ form_end(jobForm) }}
+    </div>
+{% endblock %}
